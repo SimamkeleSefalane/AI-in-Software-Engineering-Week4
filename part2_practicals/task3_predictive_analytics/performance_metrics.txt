@@ -1,0 +1,12 @@
+from sklearn.metrics import confusion_matrix
+
+cm = confusion_matrix(y_test, y_pred)
+tn, fp, fn, tp = cm.ravel()
+
+print(f"Accuracy: {accuracy:.2f}")
+print(f"F1 Score: {f1:.2f}")
+print(f"Confusion Matrix Summary:")
+print(f" - True Positives: {tp}")
+print(f" - True Negatives: {tn}")
+print(f" - False Positives: {fp}")
+print(f" - False Negatives: {fn}")
